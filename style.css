@@ -1,0 +1,122 @@
+/*importando a font roboto 400regeular e 700bold lá do google fonts*/
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap");
+
+body {
+  /*cor do fundo com gradiente*/
+  background: linear-gradient(236.85deg, #041832 27.26%, #3468a7 96.03%);
+  font-family: "Roboto", sans-serif; /*utilizadno a fonte importada roboto*/
+}
+
+.container {
+  background: #ecf4ff; /*cor do fundo*/
+  color: #1c1c1c; /*cor da fonte*/
+  margin: 64px; /*margem de distância do elemento anterior <body>*/
+  border-radius: 20px; /*para fazer a borda arredondada do elemento (com raio de 20px*/
+  box-shadow: 6px 6px 6px #0e1d2f; /*sombra que tem embaixo do elemento*/
+  padding: 64px; /*contrário do margin... com o padding damos uma margin do que está dentro deste elemento "container"*/
+}
+
+/*nessa classe vamos usar o flex-box... uma caixa flexível*/
+.cabecalho {
+  display: flex;
+  justify-content: space-between; /*propriedade para colocar espaço entre os elementos*/
+}
+
+/*nessa classe vamos usar o flex-box... uma caixa flexível*/
+.perfil {
+  display: flex; /*informando que vai ser utilizado o flex-box no elemento pai <hader>*/
+}
+
+.perfil-foto {
+  border-radius: 60px; /*para fazer a borda arredondada do elemento (com raio de 60px... coloquei 60px para não alterar essa imagem que é um hexágono*/
+  max-height: 160px; /*altura máxima*/
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25); /*usamos os valores do filter do Figma... filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));*/
+}
+
+.titulo {
+  margin-left: 16px; /*estilizando a margem esquerda do texto com 16px*/
+}
+
+.titulo h1 {
+  /*estilizando somente o h1 que é filho da classe pai "titulo"*/
+  font-weight: 700; /*peso da fonte*/
+  font-size: 36px; /*tamanho da fonte*/
+}
+
+.titulo h3 {
+  /*estilizando somente o h3 que é filho da classe pai "titulo"*/
+  font-weight: 400; /*peso da fonte*/
+  font-size: 24px; /*tamanho da fonte*/
+}
+
+.tema button {
+  align-self: flex-end; /*alinhando para no final do elemento*/
+  font-size: 24px;
+  font-weight: 400;
+  padding: 8px 16px; /*a primeira informação é a distância para o topo e a parte de baixo vão ser de 8px... e a segunda informação é para os lados... direito e esquerdo que vão ter 16px*/
+  background: #ecf4ff;
+  border-radius: 100px;
+}
+
+/*nessa classe vamos usar o flex-box... uma caixa flexível*/
+.projetos {
+  display: flex; /*informando que vai ser utilizado o flex-box no elemento pai <hader>*/
+  flex-direction: column; /*propriedade de direção em coluna*/
+  /*align-items: center; /*propriedade que vai alinhar os itens... centralizado*/
+  margin-top: 32px; /*margem do top do elemento*/
+  padding: 60px; /*contrário do margin... com o padding damos uma margin do que está dentro deste elemento "container"*/
+  background: linear-gradient(
+    230.65deg,
+    #499cfe 27.49%,
+    #9cc8fc 83.19%
+  ); /*cor do fundo com gradiente*/
+  border-radius: 20px; /*para fazer a borda arredondada do elemento (com raio de 20px*/
+  box-shadow: 2px 2px 4px rgba(16, 16, 16, 0.42); /*sombra que tem embaixo do elemento*/
+}
+
+.projetos-titulo {
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 700; /*peso da fonte*/
+  font-size: 36px; /*tamanho da fonte*/
+  color: #1c1c1c; /*cor da fonte*/
+}
+
+.projetos-item {
+  list-style: none; /*retirando a bolinha da tag <li>*/
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 400; /*peso da fonte*/
+  font-size: 24px; /*tamanho da fonte*/
+  color: #1c1c1c; /*cor da fonte*/
+  line-height: 40px; /**/
+}
+
+.projetos-item a {
+  text-decoration: none; /*retirando a decoração de sublinhado do link*/
+  color: #1c1c1c; /*cor da fonte*/
+  /*color: inherit; /*fará com que o elemento tenha a cor do seu pai*/
+}
+
+/*classe criada para mudar o tema da página... estilizar o body*/
+.dark {
+  background: linear-gradient(236.85deg, #375b86 27.26%, #6b87a9 96.03%);
+}
+
+/*colocando o tema dark na classe container*/
+.dark .container {
+  background: #333439;
+  color: #f6f6f6;
+}
+
+/*colocando o tema dark na classe projetos*/
+.dark .projetos {
+  color: #1c1c1c;
+}
+
+/*colocando o tema dark na classe tema no botão*/
+.dark .tema button {
+  background: #1c1c1c;
+  color: #ffffff;
+  border: 2px solid #f7f7f7;
+}
